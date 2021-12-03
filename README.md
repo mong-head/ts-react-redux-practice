@@ -37,5 +37,16 @@ yarn add redux react-redux @types/react-redux
     * [containers](./src/containers)
         * [CounterContainer.tsx](./src/containers/CounterContainer.tsx) : dispatch 함수들 만들고, component(Counter.tsx)를 감쌈
 
+* 예제2 : todo
+    * [modules](./src/modules)
+        * [index.ts](./src/modules/index.ts) : 모든 reducer과 state를 모음
+        * [todos.ts](./src/modules/todos.ts) : todo 에 관련한 state, reducer, action 모음 (ducks pattern)
+    * [components/Todo](./src/components/Todo) : 화면에 그려지는 컴포넌트 모음; 외부에서 state, actions, reducer 받아옴
+        * [TodoList.tsx](./src/components/Todo/TodoList.tsx)
+        * [TodoItem.tsx](./src/components/Todo/TodoItem.tsx)
+        * [TodoInsert.tsx](./src/components/Todo/TodoInsert.tsx)
+    * [containers](./src/containers)
+        * [TodoApp.tsx](./src/containers/TodoApp.tsx) : dispatch 함수들 만들고, component(TodoList.tsx, TodoInsert.tsx)를 감쌈
+
 ## 참고
 * [typescript에서 리덕스 프로처럼 사용하기](https://react.vlpt.us/using-typescript/05-ts-redux.html)
